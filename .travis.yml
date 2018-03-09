@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 8.9.4
+deploy:
+  provider: npm
+  email: matheusneder@gmail.com
+  api_key:
+    secure: s2CbAPwzd86qtCqWw/zwLWz9MeZ9nEHgaA/u1H28s15tY90RvlKNToCdF6zzYuK1/QLU5uXatT/QC9qxsPJfoJ2zHa9RnepY6eivz2vSsRxgy8jgwYDpnvjtRSLL6z8iu6JNsnI9ysJEZajV4ug/X+/eXx1ccckaxQYiHBdgrE7ghKjbPdp7azOxQe8Wz6FHD2q+6SY7BYrMAph1SJemQia53ccdrQAYEGOfG7QJeTIYTo07wspvR2+eInSGMCxa3h01xyQFNI52/0ufOYT9UVFC/pQ9GdL+SW/961An5gu1+Jrut13vgJA6I4Tr9VZPYi53kOn6IgfrmZBHydi1e4eqlPnSoKaa15kOP/SjYHXmeawnMOTomKYsIxoDF6iNBHwOOoAv9aSyV/ElQXdzVizZlyWneuBym1KRamcSOaB/1cEpPaPNLxQPVCq+FS+VsyotKzO4b4+m+FJmNsbDCuNO/MrREsg1z8usPANKVTWUabdMT3zVokY/vT3E9dJP+Kb1zkAo8ewdaRKWVqPbv7wmYeJn3lHJrU424dlm7jBBupRwsgx2v5wac77CgypHIJpetSDfN1vHOtTuRgiJwZTBzzEt543bOfCUkNLVmXJYWUFZl1v0Kfq1cNJKJ6QQj2a1WGI62zfSNQTJEshSyjRKPjo68lPaL3GIZAdC+Bc=
+  on:
+    tags: true
+    repo: mnconsulting/vcs-hosted-k8s-helm-installer
