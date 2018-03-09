@@ -26,23 +26,23 @@ const { VCSGetter } = require("vcs-getter");
 const { Installer } = require("vcs-hosted-k8s-helm-installer");
 
 async function myExample() {
-	const installer = new Installer({
-		namespace: "vcs-hosted-k8s-helm-installer", 
-		globalValues: { "replicaCount": 2 },
-		vcsGetter: new VCSGetter()
-	});
+    const installer = new Installer({
+        namespace: "vcs-hosted-k8s-helm-installer", 
+        globalValues: { "replicaCount": 2 },
+        vcsGetter: new VCSGetter()
+    });
 
-	try {
-		await installer.installOrUpgrade({
-		  "name": "appname",
-		  "source": "https://github.com/you/yourapp/tree/master/folder/where/is/the/helm/chart",
-		  "values": {
-		    "cpuLimit": "500m"
-		  }
-		});
-	} finally {
-		installer.dispose();
-	}
+    try {
+        await installer.installOrUpgrade({
+          "name": "appname",
+          "source": "https://github.com/you/yourapp/tree/master/folder/where/is/the/helm/chart",
+          "values": {
+            "cpuLimit": "500m"
+          }
+        });
+    } finally {
+        installer.dispose();
+    }
 }
 
 myExample().catch(e => console.error(e));
