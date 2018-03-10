@@ -13,7 +13,7 @@ $ npm install vcs-hosted-k8s-helm-installer
 
 ## Usage example
 
-This example uses VCS Getter library which is not a dependency of VCS Hosted Kubernetes Helm Installer, so you must to install it in addition to VCS Hosted Kubernetes Helm Installer:
+This example uses VCS Getter library which is not a dependency of VCS Hosted Kubernetes Helm Installer, so you must install it in addition to VCS Hosted Kubernetes Helm Installer:
 
 ```
 $ npm install vcs-getter
