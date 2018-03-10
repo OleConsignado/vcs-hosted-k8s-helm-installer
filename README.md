@@ -34,10 +34,10 @@ async function myExample() {
 
     try {
         await installer.installOrUpgrade({
-          "name": "appname",
-          "source": "https://github.com/you/yourapp/tree/master/folder/where/is/the/helm/chart",
-          "values": {
-            "cpuLimit": "500m"
+          name: "appname",
+          source: "https://github.com/you/yourapp/tree/master/folder/where/is/the/helm/chart",
+          values: {
+            cpuLimit: "500m"
           }
         });
     } finally {
