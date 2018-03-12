@@ -35,7 +35,7 @@ async function myExample() {
     try {
         await installer.installOrUpgrade({
           name: "appname",
-          source: "https://github.com/you/yourapp/tree/master/folder/where/is/the/helm/chart",
+          source: "https://github.com/you/yourapp/tree/branch/path/to/helm/chart",
           values: {
             cpuLimit: "500m"
           }
