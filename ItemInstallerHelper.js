@@ -89,7 +89,11 @@ class ItemInstallerHelper {
 			valuesArgument += ` -f "${this.valuesFileName}" `
 		}	
 		
-		const sourceArgument = `--set helmChartSource='${this.item.source}'`;
+		var helmChartSourceValue = this.item.source
+			.replace("'", "")
+			.replace(",", ":");
+
+		const sourceArgument = `--set helmChartSource='${helmChartSourceValue}'`;
 
 		this._preparedCmd = `helm --namespace ${this.installer.namespace} ${actionArgument} ` +
 			`"${this.releaseName}" "${(await this.getHelmArtifact()).localPath}" ` + 
