@@ -35,7 +35,9 @@ class ItemInstallerHelper {
 		if(this._diposed)
 			throw new Error("ItemInstallerHelper -> object disposed.");
 
-		return `${this.item.name}-${this.installer.namespace}`;
+		return `r-${this.item.name}-${this.installer.namespace}`
+			.toLowerCase()
+			.replace(/[^a-z0-9-]/g, '-');
 	}
 
 	async isNew() {
@@ -87,8 +89,12 @@ class ItemInstallerHelper {
 			valuesArgument += ` -f "${this.valuesFileName}" `
 		}	
 		
+		const sourceArgument = `--set helmChartSource='${this.item.source}'`;
+
 		this._preparedCmd = `helm --namespace ${this.installer.namespace} ${actionArgument} ` +
-			`"${this.releaseName}" "${(await this.getHelmArtifact()).localPath}" ${valuesArgument}`	
+			`"${this.releaseName}" "${(await this.getHelmArtifact()).localPath}" ` + 
+			`${valuesArgument} ${sourceArgument}`
+				
 	}	
 }
 
