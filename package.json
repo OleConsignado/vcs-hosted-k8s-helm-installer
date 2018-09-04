@@ -1,6 +1,6 @@
 {
   "name": "vcs-hosted-k8s-helm-installer",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "VCS Hosted Kubernetes Helm Installer provides a simple API designed to perform install and upgrade operations for Kubernetes Helm based configuration APPs hosted in a Version Control System (curretly supports Git and TFS).",
   "main": "index.js",
   "scripts": {

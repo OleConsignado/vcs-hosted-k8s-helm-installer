@@ -56,7 +56,7 @@ class Installer {
 		return stdout.split(/\r?\n/).filter(v => !!v);
 	}
 
-	async installOrUpgrade(item) {
+	async installOrUpgrade(item, force) {
 		if(this._diposed)
 			throw new Error("Installer -> object disposed.");
 
@@ -73,6 +73,9 @@ class Installer {
 			if(await helper.isNew()) {
 				shouldInstallOrUpgrade = true;
 				console.info(`${helper.releaseName}: Will perform install due to new release.`);
+			} else if(force) {
+				shouldInstallOrUpgrade = true;
+				console.info(`${helper.releaseName}: Will perform upgrade/install due to force option.`);
 			} else if(helmArtifact.changedSinceLastGet) {
 				shouldInstallOrUpgrade = true;
 				console.info(`${helper.releaseName}: Will perform upgrade/install due to changes in helm artifact.`);
