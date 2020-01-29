@@ -1,5 +1,5 @@
 # VCS Hosted Kubernetes Helm Installer
-[![Build Status](https://travis-ci.org/mnconsulting/vcs-hosted-k8s-helm-installer.svg?branch=master)](https://travis-ci.org/mnconsulting/vcs-hosted-k8s-helm-installer)
+[![Build Status](https://travis-ci.org/OleConsignado/vcs-hosted-k8s-helm-installer.svg?branch=master)](https://travis-ci.org/OleConsignado/vcs-hosted-k8s-helm-installer)
 
 VCS Hosted Kubernetes Helm Installer provides a simple API designed to perform install and upgrade operations for Kubernetes Helm based configuration APPs hosted in a Version Control System (curretly supports Git and TFS).
 

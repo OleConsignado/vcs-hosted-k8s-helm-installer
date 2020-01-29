@@ -1,6 +1,6 @@
 {
   "name": "vcs-hosted-k8s-helm-installer",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "VCS Hosted Kubernetes Helm Installer provides a simple API designed to perform install and upgrade operations for Kubernetes Helm based configuration APPs hosted in a Version Control System (curretly supports Git and TFS).",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mnconsulting/vcs-hosted-k8s-helm-installer.git"
+    "url": "git+https://github.com/OleConsignado/vcs-hosted-k8s-helm-installer.git"
   },
   "keywords": [
     "kubernetes",
@@ -16,12 +16,12 @@
     "git",
     "tfs"
   ],
-  "author": "MN Consulting",
-  "license": "MIT",
+  "author": "Matheus Neder",
+  "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/mnconsulting/vcs-hosted-k8s-helm-installer/issues"
+    "url": "https://github.com/OleConsignado/vcs-hosted-k8s-helm-installer/issues"
   },
-  "homepage": "https://github.com/mnconsulting/vcs-hosted-k8s-helm-installer#readme",
+  "homepage": "https://github.com/OleConsignado/vcs-hosted-k8s-helm-installer#readme",
   "dependencies": {
     "temp": "^0.8.3"
   }
